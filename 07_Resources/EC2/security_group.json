@@ -1,0 +1,33 @@
+{
+	"EC2SecurityGroup": {
+		"Type": "AWS::EC2::SecurityGroup",
+		"Properties": {
+			"GroupName": { "Fn::Sub": "0x4447_xxx_ec2_${UniqueIdentifierParam}" },
+			"GroupDescription": "This group allows OpenVPN to accept incomming connection from the world, while allowing access to other crucial ports only within then local network.",
+			"VpcId": { "Ref": "VPCParam" },
+			"SecurityGroupEgress": [
+				{
+					"IpProtocol": "-1",
+					"FromPort": -1,
+					"ToPort": -1,
+					"CidrIp": "0.0.0.0/0"
+				}
+			],
+			"SecurityGroupIngress": [
+				{
+					"IpProtocol": "tcp",
+					"FromPort": 22,
+					"ToPort": 22,
+					"Description": "SSH",
+					"CidrIp": { "Ref": "CidrParam" }
+				}
+			],
+			"Tags": [
+				{
+					"Key": "Name",
+					"Value": "0x4447_xxx_ec2"
+				}
+			]
+		}
+	}
+}

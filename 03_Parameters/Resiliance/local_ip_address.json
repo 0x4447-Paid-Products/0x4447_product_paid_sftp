@@ -1,0 +1,6 @@
+{
+	"LocalIPAddressParam": {
+		"Description": "The local IP of the instance, for example: 10.0.1.30",
+        "Type": "String"
+	}
+}

@@ -1,0 +1,63 @@
+{
+	"AWS::CloudFormation::Interface" : {
+		"ParameterGroups": [
+			{
+				"Label" : { "default" : "Deployment" },
+				"Parameters" : [ "UniqueIdentifierParam" ]
+			},
+			{
+				"Label" : { "default" : "Access" },
+				"Parameters" : [ "KeyNameParam" ]
+			},
+			{
+				"Label" : { "default" : "EC2 Instance" },
+				"Parameters" : [ 
+					"InstanceTypeParam", 
+					"HostnameParam" 
+				]
+			},
+			{
+				"Label" : { "default" : "EBS Drives" },
+				"Parameters" : [ 
+					"DriveIdsParam"
+				]
+			},
+			{
+				"Label" : { "default" : "Network" },
+				"Parameters" : [ 
+					"VPCParam", 
+					"VPCSubnetsPrivateParam",
+					"CidrParam",
+					"ElasticIPParam",
+					"ElasticIPIDParam"
+				]
+			},
+			{
+				"Label" : { "default" : "Resiliance" },
+				"Parameters" : [ 
+					"LocalIPAddressParam"
+				 ]
+			},
+			{
+				"Label" : { "default" : "Reserved for internal debugging" },
+				"Parameters" : [ 
+					"CustomAMIIdParam"
+				 ]
+			}
+		],
+		"ParameterLabels": {
+			"UniqueIdentifierParam": { "default" : "Unique Identifier" },			
+			"KeyNameParam": { "default" : "EC2 Private Key" },
+			"InstanceTypeParam": { "default" : "Instance Type" },
+			"VPCParam": { "default" : "VPC ID" },
+			"CidrParam": { "default" : "VPC CIDR" },
+			"VPCSubnetsPrivateParam": { "default" : "Private Subnet" },
+			"ElasticIPParam": { "default" : "Elastic IP Address" },
+			"ElasticIPIDParam": { "default" : "Elastic IP ID" },
+			"LocalIPAddressParam": { "default" : "Local IP" },
+			"DriveIdsParam": { "default" : "Drive ID's" },
+			"CustomAMIIdParam": { "default" : "AMI ID" },
+			"HostnameParam": { "default" : "Instance Hostname" }
+		}
+	}
+}

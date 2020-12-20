@@ -6,6 +6,10 @@
 				"Parameters" : [ "UniqueIdentifierParam" ]
 			},
 			{
+				"Label" : { "default" : "Monitoring" },
+				"Parameters" : [ "EmailParam" ]
+			},
+			{
 				"Label" : { "default" : "Access" },
 				"Parameters" : [ "KeyNameParam" ]
 			},
@@ -57,7 +61,8 @@
 			"LocalIPAddressParam": { "default" : "Local IP" },
 			"DriveIdsParam": { "default" : "Drive ID's" },
 			"CustomAMIIdParam": { "default" : "AMI ID" },
-			"HostnameParam": { "default" : "Instance Hostname" }
+			"HostnameParam": { "default" : "Instance Hostname" },
+			"EmailParam": { "default" : "Email" }
 		}
 	}
 }

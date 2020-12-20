@@ -1,0 +1,9 @@
+{
+    "ElasticIPAssociation": {
+        "Type" : "AWS::EC2::EIPAssociation",
+        "Properties" : {
+            "InstanceId" : { "Ref": "EC2Instance" },
+            "EIP" : { "Ref": "ElasticIP" }
+        }
+    }
+}

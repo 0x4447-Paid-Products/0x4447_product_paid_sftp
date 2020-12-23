@@ -10,43 +10,23 @@
 				"Parameters" : [ "EmailParam" ]
 			},
 			{
-				"Label" : { "default" : "Access" },
-				"Parameters" : [ "KeyNameParam" ]
-			},
-			{
-				"Label" : { "default" : "EC2 Instance" },
-				"Parameters" : [ 
-					"InstanceTypeParam", 
-					"HostnameParam" 
-				]
-			},
-			{
-				"Label" : { "default" : "EBS Drives" },
-				"Parameters" : [ 
-					"DriveIdsParam"
-				]
+				"Label" : { "default" : "Instance" },
+				"Parameters" : [ "InstanceTypeParam", "KeyNameParam", "CustomAMIIdParam" ]
 			},
 			{
 				"Label" : { "default" : "Network" },
 				"Parameters" : [ 
 					"VPCParam", 
-					"VPCSubnetsPrivateParam",
 					"CidrParam",
-					"ElasticIPParam",
-					"ElasticIPIDParam"
+					"VPCSubnetsPublicParam"
 				]
 			},
 			{
-				"Label" : { "default" : "Resiliance" },
+				"Label" : { "default" : "SFTP User" },
 				"Parameters" : [ 
-					"LocalIPAddressParam"
-				 ]
-			},
-			{
-				"Label" : { "default" : "Reserved for internal debugging" },
-				"Parameters" : [ 
-					"CustomAMIIdParam"
-				 ]
+					"UsernameParam", 
+					"PasswordParam"
+				]
 			}
 		],
 		"ParameterLabels": {
@@ -55,14 +35,11 @@
 			"InstanceTypeParam": { "default" : "Instance Type" },
 			"VPCParam": { "default" : "VPC ID" },
 			"CidrParam": { "default" : "VPC CIDR" },
-			"VPCSubnetsPrivateParam": { "default" : "Private Subnet" },
-			"ElasticIPParam": { "default" : "Elastic IP Address" },
-			"ElasticIPIDParam": { "default" : "Elastic IP ID" },
-			"LocalIPAddressParam": { "default" : "Local IP" },
-			"DriveIdsParam": { "default" : "Drive ID's" },
+			"VPCSubnetsPublicParam": { "default" : "Public Subnet" },
 			"CustomAMIIdParam": { "default" : "AMI ID" },
-			"HostnameParam": { "default" : "Instance Hostname" },
-			"EmailParam": { "default" : "Email" }
+			"EmailParam": { "default" : "Email" },
+			"UsernameParam": { "default" : "SFTP Username" },
+			"PasswordParam": { "default" : "SFTP Password" }
 		}
 	}
 }

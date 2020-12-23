@@ -1,0 +1,11 @@
+{
+    "BackupVault": {
+        "Type": "AWS::Backup::BackupVault",
+        "Properties": {
+            "BackupVaultName": { "Fn::Sub": "sftp_efs_${UniqueIdentifierParam}_${AWS::Region}" },
+            "BackupVaultTags": {
+                "Name": { "Fn::Sub": "sftp_efs_${UniqueIdentifierParam}_${AWS::Region}" }
+            }
+        }
+    }
+}

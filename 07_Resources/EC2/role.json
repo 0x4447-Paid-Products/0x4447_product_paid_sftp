@@ -2,7 +2,7 @@
 	"EC2Role": {
 		"Type": "AWS::IAM::Role",
 		"Properties": {
-			"RoleName": { "Fn::Sub": "0x4447_xxx_EC2_${UniqueIdentifierParam}" },
+			"RoleName": { "Fn::Sub": "sftp_${UniqueIdentifierParam}_${AWS::Region}" },
 			"AssumeRolePolicyDocument": {
 				"Version": "2012-10-17",
 				"Statement": [
@@ -18,12 +18,6 @@
 			"ManagedPolicyArns": [
 				"arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy",
 				"arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
-			],
-			"Tags": [
-				{
-					"Key": "Name",
-					"Value": "0x4447_xxx"
-				}
 			]
 		}
 	}

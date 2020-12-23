@@ -2,7 +2,7 @@
 	"EC2InstanceRecoveryAlarm": {
 		"Type": "AWS::CloudWatch::Alarm",
 		"Properties": {
-            "AlarmName": { "Fn::Sub": "0x4447_xxx_${UniqueIdentifierParam}_ec2_recovery" },
+            "AlarmName": { "Fn::Sub": "sftp_${UniqueIdentifierParam}_${AWS::Region}_ec2_recovery" },
             "AlarmDescription": "Recover the Instance if there is a Hardware failire within AWS.",
             "Namespace": "AWS/EC2" ,
             "MetricName": "StatusCheckFailed_System",

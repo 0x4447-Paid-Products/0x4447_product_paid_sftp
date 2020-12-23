@@ -5,7 +5,7 @@
             "Tags": [
                 {
                     "Key": "Name",
-                    "Value": { "Fn::Sub": "0x4447_sftp_single_user_${UniqueIdentifierParam}_${AWS::Region}" }
+                    "Value": { "Fn::Sub": "sftp_${UniqueIdentifierParam}_${AWS::Region}" }
                 }
             ]
         }

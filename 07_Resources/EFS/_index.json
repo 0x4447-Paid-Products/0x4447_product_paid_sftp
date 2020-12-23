@@ -1,0 +1,16 @@
+{
+	"EFS": {
+		"Type": "AWS::EFS::FileSystem",
+		"Properties": {
+			"Encrypted": true,
+            "PerformanceMode": "generalPurpose",
+            "ThroughputMode": "bursting",
+			"FileSystemTags": [
+				{
+					"Key" : "Name",
+					"Value" : { "Fn::Sub": "sftp_efs_${UniqueIdentifierParam}_${AWS::Region}" }
+				}
+			]
+		}
+	}
+}

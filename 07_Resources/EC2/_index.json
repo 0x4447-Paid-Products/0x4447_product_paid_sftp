@@ -10,8 +10,7 @@
 			"NetworkInterfaces": [{
 				"AssociatePublicIpAddress" : true,
 				"DeviceIndex": "0",
-				"PrivateIpAddress": { "Ref" : "LocalIPAddressParam" },
-				"SubnetId": { "Ref" : "VPCSubnetsPrivateParam" },
+				"SubnetId": { "Ref" : "VPCSubnetsPublicParam" },
 				"GroupSet": [
 					{ "Ref" : "EC2SecurityGroup" }
 				]
@@ -21,12 +20,12 @@
 				"#!/bin/bash",
 
 				{ "Fn::Sub": "EFS_ID=${EFS}" },
-				{ "Fn::Sub": "SFTP_USER=${ElasticIP}" },
-				{ "Fn::Sub": "SFTP_USER=${ServerDNSParam}" },
+				{ "Fn::Sub": "SFTP_USER=${UsernameParam}" },
+				{ "Fn::Sub": "SFTP_PASS=${PasswordParam}" },
 
 				"echo EFS_ID=$EFS_ID >> /home/ec2-user/.env",
 				"echo SFTP_USER=$SFTP_USER >> /home/ec2-user/.env",
-				"echo SFTP_USER=$SFTP_USER >> /home/ec2-user/.env",
+				"echo SFTP_PASS=$SFTP_PASS >> /home/ec2-user/.env",
 
 				{ "Fn::Sub": "sudo /opt/aws/bin/cfn-init -v --region ${AWS::Region} --stack ${AWS::StackName} --resource EC2Instance" },
 
@@ -36,20 +35,8 @@
             "Tags": [
                 {
 					"Key": "Name",
-					"Value": { "Fn::Sub": "0x4447_xxx_${UniqueIdentifierParam}" }
-				},
-                {
-                    "Key" : "Description",
-                    "Value" : "Mount any AWS Drive in to a central place."
-                },
-                {
-                    "Key" : "Author",
-                    "Value" : "0x4447 LLC"
-                },
-                {
-                    "Key" : "Info",
-                    "Value" : "https://0x4447.com"
-                }
+					"Value": { "Fn::Sub": "sftp_${UniqueIdentifierParam}_${AWS::Region}" }
+				}
             ]
         },
         "Metadata": {

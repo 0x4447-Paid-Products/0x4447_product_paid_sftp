@@ -2,8 +2,8 @@
 	"SNSTopic": {
 		"Type": "AWS::SNS::Topic",
 		"Properties": {
-			"DisplayName": { "Fn::Sub": "0x4447_xxx_${UniqueIdentifierParam}" },
-			"TopicName": { "Fn::Sub": "0x4447_xxx_${UniqueIdentifierParam}" },
+			"DisplayName": { "Fn::Sub": "sftp_${UniqueIdentifierParam}_${AWS::Region}" },
+			"TopicName": { "Fn::Sub": "sftp_${UniqueIdentifierParam}_${AWS::Region}" },
 			"Tags": [
 				{
 					"Key": "Description",

@@ -1,0 +1,6 @@
+{
+	"VPCSubnetsPublicParam": {
+		"Description": "Select a public subnet to deploy the instance in.",
+		"Type": "AWS::EC2::Subnet::Id"
+	}
+}

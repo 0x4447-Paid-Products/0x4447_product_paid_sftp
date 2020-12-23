@@ -2,7 +2,7 @@
     "InstanceTypeParam" : {
         "Type" : "String",
         "Default" : "t3a.nano",
-        "Description" : "The more users you have the bigger instance you'll need.",
+        "Description" : "Select a instance type that fits your use case.",
         "AllowedValues" : [ 
             "t2.nano", 
             "t2.micro", 

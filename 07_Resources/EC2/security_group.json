@@ -2,7 +2,7 @@
 	"EC2SecurityGroup": {
 		"Type": "AWS::EC2::SecurityGroup",
 		"Properties": {
-			"GroupName": { "Fn::Sub": "sftp_${UniqueIdentifierParam}_${AWS::Region}" },
+			"GroupName": { "Fn::Sub": "sftp_user_single_${UniqueIdentifierParam}_${AWS::Region}" },
 			"GroupDescription": "This group allows OpenVPN to accept incomming connection from the world, while allowing access to other crucial ports only within then local network.",
 			"VpcId": { "Ref": "VPCParam" },
 			"SecurityGroupEgress": [
@@ -25,7 +25,7 @@
 			"Tags": [
 				{
 					"Key": "Name",
-					"Value": { "Fn::Sub": "sftp_${UniqueIdentifierParam}_${AWS::Region}" }
+					"Value": { "Fn::Sub": "sftp_user_single_${UniqueIdentifierParam}_${AWS::Region}" }
 				}
 			]
 		}

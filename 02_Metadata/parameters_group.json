@@ -11,7 +11,7 @@
 			},
 			{
 				"Label" : { "default" : "Instance" },
-				"Parameters" : [ "InstanceTypeParam", "KeyNameParam", "CustomAMIIdParam" ]
+				"Parameters" : [ "InstanceTypeParam", "KeyNameParam" ]
 			},
 			{
 				"Label" : { "default" : "Network" },
@@ -27,6 +27,10 @@
 					"UsernameParam", 
 					"PasswordParam"
 				]
+			},
+			{
+				"Label" : { "default" : "Debug" },
+				"Parameters" : [ "CustomAMIIdParam" ]
 			}
 		],
 		"ParameterLabels": {

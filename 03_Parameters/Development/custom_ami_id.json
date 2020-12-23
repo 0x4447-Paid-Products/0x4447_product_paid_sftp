@@ -1,6 +1,6 @@
 {
 	"CustomAMIIdParam": {
-		"Description": "Paste the AMI ID to be used to start the instance with.",
+		"Description": "INTERNAL USE ONLY >><< Keep this field empty.",
         "Type": "String"
 	}
 }

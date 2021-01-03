@@ -1,6 +1,7 @@
 {
     "BackupPlan": {
         "Type": "AWS::Backup::BackupPlan",
+        "Condition": "NewEFS",
         "Properties": {
             "BackupPlan": {
                 "BackupPlanName": { "Fn::Sub": "sftp_efs_${UniqueIdentifierParam}_${AWS::Region}" },

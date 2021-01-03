@@ -1,0 +1,6 @@
+{
+	"OptionalEFSIDParam": {
+		"Description": "OPTIONAL >><< If this field is filled, we won't create the EFS drive, and the backup scheduel. If you provide a EFS ID, We will mount the Drive you provided. Make sure the EFS drive is in the same subnet as the EC2 Instance .",
+        "Type": "String"
+	}
+}

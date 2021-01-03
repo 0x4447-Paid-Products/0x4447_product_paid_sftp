@@ -19,7 +19,7 @@
 
 				"#!/bin/bash",
 
-				{ "Fn::Sub": "EFS_ID=${EFS}" },
+				{ "Fn::If": [ "isCustomEFS", { "Fn::Sub": "EFS_ID=${OptionalEFSIDParam}" }, { "Fn::Sub": "EFS_ID=${EFS}" } ] },
 				{ "Fn::Sub": "SFTP_USER=${UsernameParam}" },
 				{ "Fn::Sub": "SFTP_PASS=${PasswordParam}" },
 

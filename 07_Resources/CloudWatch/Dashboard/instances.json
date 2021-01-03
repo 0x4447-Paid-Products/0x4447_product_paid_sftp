@@ -12,7 +12,7 @@
 						"region": { "Ref": "AWS::Region" },
 						"AccountId": { "Ref": "AWS::AccountId" },
 						"UniqueIdentifier": { "Ref": "UniqueIdentifierParam" },
-						"FileSystemId": { "Ref": "EFS" }
+						"FileSystemId": { "Fn::If": [ "isCustomEFS", { "Ref": "OptionalEFSIDParam" }, { "Ref": "EFS" } ] }
 					}
 				]
 			}

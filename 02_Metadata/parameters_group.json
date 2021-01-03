@@ -29,6 +29,10 @@
 				]
 			},
 			{
+				"Label" : { "default" : "Drive" },
+				"Parameters" : [ "OptionalEFSIDParam" ]
+			},
+			{
 				"Label" : { "default" : "Debug" },
 				"Parameters" : [ "CustomAMIIdParam" ]
 			}
@@ -43,7 +47,8 @@
 			"CustomAMIIdParam": { "default" : "AMI ID" },
 			"EmailParam": { "default" : "Email" },
 			"UsernameParam": { "default" : "SFTP Username" },
-			"PasswordParam": { "default" : "SFTP Password" }
+			"PasswordParam": { "default" : "SFTP Password" },
+			"OptionalEFSIDParam": { "default" : "EFS ID" }
 		}
 	}
 }

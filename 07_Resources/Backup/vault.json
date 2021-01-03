@@ -1,6 +1,7 @@
 {
     "BackupVault": {
         "Type": "AWS::Backup::BackupVault",
+        "Condition": "NewEFS",
         "Properties": {
             "BackupVaultName": { "Fn::Sub": "sftp_efs_${UniqueIdentifierParam}_${AWS::Region}" },
             "BackupVaultTags": {

@@ -1,6 +1,7 @@
 {
 	"BackupRole": {
 		"Type": "AWS::IAM::Role",
+		"Condition": "NewEFS",
 		"Properties": {
 			"RoleName": { "Fn::Sub": "sftp_efs_${UniqueIdentifierParam}_${AWS::Region}" },
 			"AssumeRolePolicyDocument": {

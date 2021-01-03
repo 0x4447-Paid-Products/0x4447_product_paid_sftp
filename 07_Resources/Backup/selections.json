@@ -1,6 +1,7 @@
 {
     "BackupSelection": {
         "Type" : "AWS::Backup::BackupSelection",
+        "Condition": "NewEFS",
         "Properties" : {
             "BackupPlanId" : { "Ref": "BackupPlan" },
             "BackupSelection" : {

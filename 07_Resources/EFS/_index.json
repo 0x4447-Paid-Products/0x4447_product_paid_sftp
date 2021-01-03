@@ -5,7 +5,10 @@
 		"Properties": {
 			"Encrypted": true,
             "PerformanceMode": "generalPurpose",
-            "ThroughputMode": "bursting",
+			"ThroughputMode": "bursting",
+			"BackupPolicy": {
+				"Status" : "ENABLED"
+			},
 			"FileSystemTags": [
 				{
 					"Key" : "Name",

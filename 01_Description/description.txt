@@ -1,1 +1,1 @@
-Describse the SFTP Singe User Server - product of 0x4447
+SFTP Server - Single User Setup - product of 0x4447

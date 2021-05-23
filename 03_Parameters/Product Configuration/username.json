@@ -1,6 +1,6 @@
 {
 	"UsernameParam": {
-		"Description": "The user name of the SFTP server.",
+		"Description": "The username for the external SFTP user.",
 		"Type": "String"
 	}
 }

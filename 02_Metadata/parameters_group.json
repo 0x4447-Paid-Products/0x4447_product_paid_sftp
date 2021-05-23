@@ -6,46 +6,45 @@
 				"Parameters" : [ "UniqueIdentifierParam" ]
 			},
 			{
+				"Label" : { "default" : "EC2 Instance" },
+				"Parameters" : [
+					"InstanceTypeParam",
+					"KeyNameParam"
+				]
+			},
+			{
+				"Label" : { "default" : "Network" },
+				"Parameters" : [
+					"VPCParam",
+					"VPCSubnetsPrivateParam",
+					"CidrParam"
+				]
+			},
+			{
 				"Label" : { "default" : "Monitoring" },
 				"Parameters" : [ "EmailParam" ]
 			},
 			{
-				"Label" : { "default" : "Instance" },
-				"Parameters" : [ "InstanceTypeParam", "KeyNameParam" ]
-			},
-			{
-				"Label" : { "default" : "Network" },
-				"Parameters" : [ 
-					"VPCParam", 
-					"CidrParam",
-					"VPCSubnetsPublicParam"
+				"Label" : { "default" : "Product Configuration" },
+				"Parameters" : [
+					"UsernameParam",
+					"PasswordParam",
+					"OptionalEFSIDParam"
 				]
-			},
-			{
-				"Label" : { "default" : "SFTP User" },
-				"Parameters" : [ 
-					"UsernameParam", 
-					"PasswordParam"
-				]
-			},
-			{
-				"Label" : { "default" : "Drive" },
-				"Parameters" : [ "OptionalEFSIDParam" ]
-			},
-			{
-				"Label" : { "default" : "Debug" },
-				"Parameters" : [ "CustomAMIIdParam" ]
 			}
 		],
 		"ParameterLabels": {
-			"UniqueIdentifierParam": { "default" : "Unique Identifier" },			
-			"KeyNameParam": { "default" : "EC2 Private Key" },
+			"UniqueIdentifierParam": { "default" : "Unique Identifier" },
+
 			"InstanceTypeParam": { "default" : "Instance Type" },
+			"KeyNameParam": { "default" : "EC2 Private Key" },
+
 			"VPCParam": { "default" : "VPC ID" },
-			"CidrParam": { "default" : "VPC CIDR" },
 			"VPCSubnetsPublicParam": { "default" : "Public Subnet" },
-			"CustomAMIIdParam": { "default" : "AMI ID" },
+			"CidrParam": { "default" : "VPC CIDR" },
+
 			"EmailParam": { "default" : "Email" },
+
 			"UsernameParam": { "default" : "SFTP Username" },
 			"PasswordParam": { "default" : "SFTP Password" },
 			"OptionalEFSIDParam": { "default" : "EFS ID" }

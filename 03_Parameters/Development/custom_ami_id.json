@@ -1,6 +1,0 @@
-{
-	"CustomAMIIdParam": {
-		"Description": "INTERNAL USE ONLY >> keep this field empty <<",
-        "Type": "String"
-	}
-}

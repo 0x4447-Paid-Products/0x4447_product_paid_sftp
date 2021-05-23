@@ -16,7 +16,7 @@
 				"Label" : { "default" : "Network" },
 				"Parameters" : [
 					"VPCParam",
-					"VPCSubnetsPrivateParam",
+					"VPCSubnetsPublicParam",
 					"CidrParam"
 				]
 			},

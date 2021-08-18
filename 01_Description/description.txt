@@ -1,1 +1,1 @@
-SFTP Server - Single User Setup - product of 0x4447
+SFTP Server - Single User Setup ::: a product from the AWS Marketplace by 0x4447, documentation at: https://documentation.0x4447.com

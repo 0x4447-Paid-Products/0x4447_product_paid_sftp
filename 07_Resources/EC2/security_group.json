@@ -19,7 +19,7 @@
 					"FromPort": 22,
 					"ToPort": 22,
 					"Description": "SSH",
-					"CidrIp": "0.0.0.0/0"
+					"CidrIp": { "Fn::Sub": "${SourceIPParam}" }
 				}
 			],
 			"Tags": [

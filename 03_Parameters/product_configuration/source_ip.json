@@ -1,0 +1,7 @@
+{
+	"SourceIPParam": {
+		"Description": "The IP of the client that will connect to the server. The default value allows anyone to connect. To set a fixed IP, type it in, and end the IP with /32.",
+        "Type": "String",
+        "Default" : "0.0.0.0/0"
+	}
+}

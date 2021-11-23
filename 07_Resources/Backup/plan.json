@@ -7,7 +7,7 @@
                 "BackupPlanName": { "Fn::Sub": "sftp_efs_${UniqueIdentifierParam}_${AWS::Region}" },
                 "BackupPlanRule": [
                     {
-                        "RuleName": { "Fn::Sub": "Daily Backups with 7 Days retention" },
+                        "RuleName": "daily_backups_with_7_days_retention",
                         "TargetBackupVault": { "Ref": "BackupVault" },
                         "ScheduleExpression": "cron(0 5 ? * * *)",
                         "Lifecycle": {

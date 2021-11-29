@@ -18,7 +18,33 @@
 			"ManagedPolicyArns": [
 				"arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy",
 				"arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
-			]
+			],
+			"Tags": [
+				{
+					"Key": "Name",
+					"Value": "0x4447_sftp"
+				}
+			],
+            "Policies": [
+                {
+                    "PolicyName": "cloudwatch_logs_access",
+                    "PolicyDocument": {
+                        "Version": "2012-10-17",
+                        "Statement": [
+                            {
+                                "Effect": "Allow",
+                                "Action": [
+                                    "logs:CreateLogGroup",
+                                    "logs:CreateLogStream",
+                                    "logs:PutLogEvents",
+                                    "logs:DescribeLogStreams"
+                                ],
+                                "Resource": "*"
+                            }
+                        ]
+                    }
+                }
+            ]
 		}
 	}
 }

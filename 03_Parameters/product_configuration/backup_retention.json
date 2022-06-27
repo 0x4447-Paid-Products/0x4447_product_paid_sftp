@@ -1,0 +1,7 @@
+{
+	"OptionalBackupRetentionTimeParam": {
+		"Description": "Provide how many days AWS Backup should retain the EFS backups.",
+        "Type": "String",
+        "Default": "7"
+	}
+}

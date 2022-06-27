@@ -30,6 +30,7 @@
 					"UsernameParam",
 					"PasswordParam",
 					"OptionalEFSIDParam",
+					"OptionalBackupRetentionTimeParam",
 					"SourceIPParam"
 				]
 			}
@@ -49,6 +50,7 @@
 			"UsernameParam": { "default" : "SFTP Username" },
 			"PasswordParam": { "default" : "SFTP Password" },
 			"OptionalEFSIDParam": { "default" : "EFS ID" },
+			"OptionalBackupRetentionTimeParam": { "default" : "AWS Backup Retention Time" },
 			"SourceIPParam": { "default" : "Source IP" }
 		}
 	}

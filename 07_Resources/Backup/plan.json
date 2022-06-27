@@ -7,11 +7,11 @@
                 "BackupPlanName": { "Fn::Sub": "sftp_efs_${UniqueIdentifierParam}_${AWS::Region}" },
                 "BackupPlanRule": [
                     {
-                        "RuleName": "daily_backups_with_7_days_retention",
+                        "RuleName": { "Fn::Sub": "daily_backups_with_${OptionalBackupRetentionTimeParam}_days_retention" },
                         "TargetBackupVault": { "Ref": "BackupVault" },
                         "ScheduleExpression": "cron(0 5 ? * * *)",
                         "Lifecycle": {
-                            "DeleteAfterDays" : 7
+                            "DeleteAfterDays" : { "Ref": "OptionalBackupRetentionTimeParam" }
                         },
                         "RecoveryPointTags": {
                             "Name": { "Fn::Sub": "sftp_efs_${UniqueIdentifierParam}_${AWS::Region}" }

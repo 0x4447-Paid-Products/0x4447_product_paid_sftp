@@ -1,6 +1,6 @@
 {
     "UniqueIdentifierParam": {
-        "Description": "Provide a unique name for this deployment. We will use it to create unique names for each resource to allow you multiple deployments of the same product.",
+        "Description": "Provide a unique name for this stack. We will use it to create unique names for each resource to allow multiple deployments of the same product.",
         "Type": "String"
     }
 }

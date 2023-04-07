@@ -1,7 +1,7 @@
 ---
 name: 🚀 New Release
 about: Release a new version of the product.
-title: "🚀 Release vX.X.X
+title: "🚀 Release vX.X.X"
 labels: "release"
 ---
 

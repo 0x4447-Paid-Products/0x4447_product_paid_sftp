@@ -31,7 +31,9 @@
 					"PasswordParam",
 					"OptionalEFSIDParam",
 					"OptionalBackupRetentionTimeParam",
-					"SourceIPParam"
+					"SourceIPParam",
+					"PGPKeyParam",
+					"PGPKeySeedParam"
 				]
 			}
 		],
@@ -51,7 +53,9 @@
 			"PasswordParam": { "default" : "SFTP Password" },
 			"OptionalEFSIDParam": { "default" : "EFS ID" },
 			"OptionalBackupRetentionTimeParam": { "default" : "AWS Backup Retention Time" },
-			"SourceIPParam": { "default" : "Source IP" }
+			"SourceIPParam": { "default" : "Source IP" },
+			"PGPKeyParam": { "default" : "PGP Key" },
+			"PGPKeySeedParam": { "default": "PGP Key Seed" }
 		}
 	}
 }

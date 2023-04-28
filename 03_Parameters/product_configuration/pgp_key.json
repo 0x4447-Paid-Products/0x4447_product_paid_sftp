@@ -1,0 +1,6 @@
+{
+	"PGPKeyParam": {
+		"Description": "PGP Public Key for stored files encryption.",
+        "Type": "String"
+	}
+}

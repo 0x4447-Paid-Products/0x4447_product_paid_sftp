@@ -22,10 +22,13 @@
 				{ "Fn::If": [ "isCustomEFS", { "Fn::Sub": "EFS_ID=${OptionalEFSIDParam}" }, { "Fn::Sub": "EFS_ID=${EFS}" } ] },
 				{ "Fn::Sub": "SFTP_USER=${UsernameParam}" },
 				{ "Fn::Sub": "SFTP_PASS=${PasswordParam}" },
+				{ "Fn::Sub": "PGP_KEY_DATA=${PGPKeyParam}" },
+				{ "Fn::Sub": "PGP_KEY_SEED=${PGPKeySeedParam}" },
 
 				"echo EFS_ID=$EFS_ID >> /home/ec2-user/.env",
 				"echo SFTP_USER=$SFTP_USER >> /home/ec2-user/.env",
 				"echo SFTP_PASS=$SFTP_PASS >> /home/ec2-user/.env",
+				"[[ ! -z \"$PGP_KEY_DATA\" ]] && echo $PGP_KEY_DATA > /etc/ssl/sftp.pubkey.pem && echo $PGP_KEY_SEED > /etc/ssl/sftp.seed.txt && echo ENCRYPTION=1 >> /home/ec2-user/.env",
 
 				{ "Fn::Sub": "sudo /opt/aws/bin/cfn-init -v --region ${AWS::Region} --stack ${AWS::StackName} --resource EC2Instance" },
 

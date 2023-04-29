@@ -1,6 +1,6 @@
 {
 	"PGPKeyParam": {
-		"Description": "PGP Public Key for stored files encryption.",
+		"Description": "The PGP Public Key that you generated as a long string with no header and footer section of the key. Check the official documentation for more information.",
         "Type": "String"
 	}
 }

@@ -32,8 +32,7 @@
 					"OptionalEFSIDParam",
 					"OptionalBackupRetentionTimeParam",
 					"SourceIPParam",
-					"PGPKeyParam",
-					"PGPKeySeedParam"
+					"Encryption"
 				]
 			}
 		],
@@ -54,8 +53,7 @@
 			"OptionalEFSIDParam": { "default" : "EFS ID" },
 			"OptionalBackupRetentionTimeParam": { "default" : "AWS Backup Retention Time" },
 			"SourceIPParam": { "default" : "Source IP" },
-			"PGPKeyParam": { "default" : "PGP Key" },
-			"PGPKeySeedParam": { "default": "PGP Key Seed" }
+			"Encryption": { "default" : "Enable individual file encryption" }
 		}
 	}
 }

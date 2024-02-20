@@ -2,7 +2,7 @@
 	"Encryption": {
 		"Description": "Enable PGP encription for files uploaded to the server (check the official documentation for more information).",
         "Type": "String",
-	"AllowedPattern": "^(Yes|No)$",
+	"AllowedValues": ["No", "Yes"],
 	"Default": "No"
 	}
 }

@@ -1,6 +1,0 @@
-{
-	"PGPKeySeedParam": {
-		"Description": "The PGP Public Key Seed (check the official documentation for more information).",
-        "Type": "String"
-	}
-}
